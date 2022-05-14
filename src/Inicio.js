@@ -7,7 +7,7 @@ export default function Inicio () {
     if (telaInicio) {
         return (
             <div className="inicio">
-                <img src={logo} ></img>
+                <img src={logo} alt="logo"></img>
                 <h1>ZapRecall</h1>
                 <button onClick={()=> setTelaInicio(false)}>Iniciar Recall!</button>
             </div>
