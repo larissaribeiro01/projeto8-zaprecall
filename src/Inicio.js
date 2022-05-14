@@ -1,12 +1,21 @@
+import React from 'react';
+import logo from '../src/Imagens/logo.png'
 
 
-export default function Inicio (props) {
-    return (
-        <div className="inicio">
-            <img src='Imagens\logo.png' ></img>
-            <h1>ZapRecall</h1>
-            <button onClick={()=> props.setTelaInicio('n')}>Iniciar Recall!</button>
-        </div>
+export default function Inicio () {
+    const [telaInicio, setTelaInicio] = React.useState(true)
+    if (telaInicio) {
+        return (
+            <div className="inicio">
+                <img src={logo} ></img>
+                <h1>ZapRecall</h1>
+                <button onClick={()=> setTelaInicio(false)}>Iniciar Recall!</button>
+            </div>
+    
+        )
 
-    )
+    } else {
+        return <></>
+    }
+    
 }
