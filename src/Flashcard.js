@@ -7,7 +7,7 @@ export default function Flashcard (props) {
         setEtapa(etapa);
         setResposta(resposta)
     }
-    const {Q, R, index}=props;
+    const {Q, R, index, guardarResp}=props;
     const [etapa, setEtapa] = React.useState(1)
     const [resposta, setResposta] = React.useState("")
     if (etapa==1) {
@@ -36,7 +36,7 @@ export default function Flashcard (props) {
                 {R}
                 <div className='opçoes'>
                     {opçoes.map((dado, index)=> 
-                    <button className={dado.resul} key={index} onClick={()=> setEtapaeResposta(4, dado.resul)}>
+                    <button className={dado.resul} key={index} onClick={()=> {setEtapaeResposta(4, dado.resul); guardarResp(dado.resul)}}>
                         {dado.texto}
                     </button>)}
                 </div>

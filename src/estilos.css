@@ -96,6 +96,7 @@ button {
 
 .perguntas {
     flex-direction: column;
+    z-index: 0;
     
     
 }
@@ -121,18 +122,22 @@ button {
 
 .tela2 .footer {
     background-color: #FFFFFF;
-    height: 70px;
+    max-height: 171px;
+    min-height: 70px;
     width: 100%;
     color: #333333;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     font-size: 18px;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 0;
+
 }
+
 
 .questao {
     height: 131px;
@@ -188,4 +193,34 @@ button {
 .pergunta ion-icon {
     padding-left: 50%;
     font-size: 30px;
+}
+
+.resultadofinal {
+    
+    background-color: #FFFFFF;
+}
+.resultadofinal ion-icon {
+    font-size: 20px;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado {
+    flex-direction: column;
+    height: 171px;
+    
+    
+}
+
+.resultado div img {
+    width: 23px;
+    height: 23px;
+}
+
+.resultado div {
+    font-weight: bolder;
 }
